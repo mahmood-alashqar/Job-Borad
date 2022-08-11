@@ -1,0 +1,22 @@
+<%= form_with model:@user, url: sign_up_path do |form| %>
+<% if@user.errors.any? %>
+<div class:"alert alert-danger">
+<% @user.errors.full_messages.each do |messages| %>
+<% end %>
+</div>
+<% end %>
+
+  <div class="mb-3">
+<%= form.label :Email %>
+<%= form.text_field :email, class: "form-control", placeholder: "ashqur@zen.com" %>
+  </div>
+  <div class="mb-3">
+<%= form.label :Password %>
+<%= form.password_field :password, class: "form-control", placeholder: "**********" %>
+  </div>
+    <div class="mb-3">
+<%= form.label :Password_Confirmation %>
+<%= form.password_field :Password_Confirmation, class: "form-control", placeholder: "**********" %>
+  </div>
+  <%= form.submit "Submit", class:"btn btn-primary" %>
+<% end %>

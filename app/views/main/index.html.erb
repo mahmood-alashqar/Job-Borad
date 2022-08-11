@@ -1,7 +1,7 @@
-  <%= render partial: "shared/flash"%>
-
 <div class="d-flex align-items-center justify-content-center">
-
-<h1>Hello</h1>
-
+  <% if @user %>
+  <%= render partial: "shared/flash"%>
+  <%= @user.email %> Is Logged In <%= @user.id %>
+  <%= link_to "Logout", logout_path, method: :delete, class:"btn btn-danger" %>
+<% end %>
 </div>
