@@ -1,0 +1,16 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "line",
+    "editor.wordWrap": "on",
+    "files.associations": {
+        ".rb": "ruby",
+        ".reb": "ruby"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.columnSelection": false,
+    "editor.comments.insertSpace": true,
+    "editor.defaultFormatter": "ctcuff.font-preview",
+    "editor.guides.bracketPairs": true,
+    "ruby.codeCompletion": "rcodetools"
+}

@@ -28,6 +28,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem 'tzinfo-data'
 gem 'rubocop', require: false
+# Devise Token Auth
+# gem 'devise_token_auth'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

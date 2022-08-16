@@ -1,6 +1,6 @@
 class RegistrationController < ApplicationController
 def new
-@user=User.new
+@user=Users.new
 end
 
 
@@ -8,7 +8,7 @@ def create
     # render params =
     #  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "Password_Confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
    # @user=User.new(params[:user]) # user params ={"email"=>"", "password"=>"[FILTERED]", "Password_Confirmation"=>"[FILTERED]"}
-    @user=User.new(user_params)
+    @user=Users.new(user_params)
     if @user.save
         # cookie[:user_id]
         session[:user_id]=@user.id
@@ -24,7 +24,7 @@ private
 
 
 def user_params
-params.require(:user).permit(:email, :password, :password_confirmation) #specify the exact attribute allowed for the user
+params.require(:users).permit(:email, :password, :password_confirmation, :recruiter) #specify the exact attribute allowed for the user
 end
 
 end

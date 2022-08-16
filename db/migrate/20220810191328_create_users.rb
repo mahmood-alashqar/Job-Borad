@@ -3,6 +3,8 @@ class CreateUsers < ActiveRecord::Migration[7.0]
     create_table :users do |t|
       t.string :email, null: false, unique: true
       t.string :password_digest, null: false#, format:{with:Regex, message:""}
+      t.integer :jobs
+      t.boolean :recruiter, default:false
 
       t.timestamps
     end

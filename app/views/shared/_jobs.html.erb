@@ -1,0 +1,18 @@
+
+<div class="card text-center">
+    <% @job.each do |s| %>
+    <%= form_with model:@job, url: jobs_Applied_jobs_path do |form| %>
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= s.title %></h5>
+    <p class="card-text" style="margin-left:auto; margin-right:auto; width:60%; height: 200px; overflow-y: scroll;"><%= s.description %></p>
+  </div>
+  <div class="card-footer text-muted">
+    <%= s.created_at %>
+    <%= form.submit "Apply", class:"btn btn-primary" %>
+    <% end %>
+    <% end %>
+  </div>
+</div>

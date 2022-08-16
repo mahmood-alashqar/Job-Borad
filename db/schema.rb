@@ -10,12 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_10_191328) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_18_163809) do
+  create_table "companies", id: false, force: :cascade do |t|
+    t.decimal "id"
+    t.string "name"
+    t.string "location"
+    t.decimal "employees_number"
+    t.string "branches"
+  end
+
+  create_table "job_applies", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "position"
+    t.string "describtion"
+    t.binary "attachment"
+    t.integer "recruiter_id", null: false
+    t.string "experiance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "title"
+    t.string "company"
+    t.boolean "applied"
+    t.string "level"
+    t.boolean "available"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "branch"
+    t.string "description"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "recruiter"
   end
 
 end

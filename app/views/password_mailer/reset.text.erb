@@ -1,0 +1,6 @@
+Greetings Mr.<%= params[:user].email %>...</br>
+
+Someone requsted a reset password for your account .
+If this is you click the link below to reset your password, don't share it with anyone else.</br>
+The link will expire in 15 minutes.</br>
+<%= password_reset_edit_url(token: @token) %>, find me in app/views/password_mailer/reset.html.erb

@@ -1,0 +1,73 @@
+
+<div class="container">
+  <div class="row mx-0 justify-content-center">
+    <div class="col-md-7 col-lg-5 px-lg-2 col-xl-4 px-xl-0 px-xxl-3">
+<%= form_with model:@job_applies, url: jobs_add_job_path  do |form| %>
+        <label class="d-block mb-4">
+          <span class="form-label d-block">Your name</span>
+<%= form.text_field :name, class:"form-control" %>
+        </label>
+
+        <label class="d-block mb-4">
+          <span class="form-label d-block">Email address</span>
+<%= form.text_field :email, class: "form-control", placeholder: "ashqur@zen.com" %>
+        </label>
+                <label class="d-block mb-4">
+          <span class="form-label d-block">Position</span>
+<%= form.text_field :position, class:"form-control" %>
+        </label>
+
+        <label class="d-block mb-4">
+          <span class="form-label d-block">Years of experience</span>
+          
+          <%= form.select :experience, options_for_select([["Select One", ""],"Less than a year", "1 - 2 years", "2 - 4 years", "4 - 7 years", "10+ years"]), class:"form-select" %>
+        <label class="d-block mb-4">
+          <span class="form-label d-block">Tell us more about yourself</span>
+          <%= form.text_area :describtion, class:"form_control", rows:"3",size: "50x5", placeholder:"What motivates you?" %>
+        </label>
+
+        <label class="d-block mb-4">
+          <span class="form-label d-block">Your Resume</span>
+<%= form.file_field :attachment, :multiple => true %>
+        </label>
+
+        <div class="mb-4">
+          <div>
+            <div class="form-check">
+              <label class="d-block">
+                <span class="form-check-label">You'd like to work remotely</span>
+                <%= form.radio_button :remotly , class:"form-check-input"  %>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div>
+            <div class="form-check">
+              <label class="d-block">
+                <span class="form-check-label">You'd prefer to work onsite</span>
+                <%= form.radio_button :remotly , class:"form-check-input"  %>
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+           <%= form.submit "Apply", class:"btn btn-primary px-3 rounded-3" %>
+        </div>
+
+        <div class="d-block text-end">
+          <div class="small">
+            by
+            <a
+              href="https://herotofu.com"
+              class="text-dark text-decoration-none"
+              target="_blank"
+              >HeroTofu</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
