@@ -1,0 +1,14 @@
+<div class="card text-center">
+    <% @job.each do |s| %>
+  <div class="card-header">
+    <%= s.name %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= s.position %></h5>
+    <p class="card-text" style="margin-left:auto; margin-right:auto; width:60%; height: 200px; overflow-y: scroll;"> <%= s.describtion %> </p>
+  </div>
+  <div class="card-footer text-muted">
+    <%= s.created_at %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<%= form_with model:@user, url: sign_in_path do |form| %>
+  <div class="mb-3">
+<%= form.label :Email %>
+<%= form.text_field :email, class: "form-control", placeholder: "ashqur@zen.com" %>
+  </div>
+  <div class="mb-3">
+<%= form.label :Password %>
+<%= form.password_field :password, class: "form-control", placeholder: "**********" %>
+<%= link_to "Forget Your Password? ", password_reset_path %>
+  </div>
+  <%= form.submit "Log in", class:"btn btn-primary" %>
+<% end %>

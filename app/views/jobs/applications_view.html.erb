@@ -1,0 +1,17 @@
+<div class="card text-center">
+<% @job_applies.each do |applied| %>
+    <%= form_with model:@job_applies, url: password_reset_path do |form| %>
+  <div class="card-header">
+    <%=applied.name%>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Has a <%= applied.experiance %> experience in <%= applied.position %>  </h5>
+    <p class="card-text" style="margin-left:auto; margin-right:auto; width:60%; height: 200px; overflow-y: scroll;"> <%= applied.describtion %> </p>
+  </div>
+  <div class="card-footer text-muted">
+    <%= applied.created_at %>
+    <%= form.submit "Email", class:"btn btn-success" %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
