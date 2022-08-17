@@ -1,4 +1,7 @@
 class JobsController < ApplicationController
+  def get_by_id 
+    company = Jobs.find_by(id: params[:id])
+  end
 #TODO 
 def new
   @job_applies=JobApply.new

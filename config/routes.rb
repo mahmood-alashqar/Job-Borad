@@ -38,6 +38,8 @@ Rails.application.routes.draw do
 
     post "/jobs/add_job", to:"jobs#create_job_post"
     get "/jobs/add_job", to:"jobs#new"
+    get "/test", to:"companies#test"
+    get "/test/new", to:"companies#new"
 
     # /Apply Jobs
     get "/jobs/Apply_Job", to:"jobs#new"

@@ -1,23 +1,10 @@
-<% if Current.user %>
-<div class="text-left">
-<h4 >We will welcome for this email and not the person who are own it  <span class="badge badge-secondary"><%= Current.user.email  %></span></h4>
-</div>
-<div class="text-lg-left">
-        <h2 class="text-center"> If you admin sir you will find some features for you on the menu at the top of secreen</h2>
-</div>
-<div class="text-sm-left">
-        <h6>Checking if you are an Recruiter.....</h6>
-        <%= Current.user.recruiter %>
-</div>
-        <br>
-<% else %>
-<a class="btn btn-primary" href="/sign_up" role="button">Sign Up</a>
-<a class="btn btn-outline-success" href="/sign_in" role="button">Sign_in</a>
-<a class="btn btn-outline-info" href="/jobs" role="button">Discover Jobs</a>
-  <hr>
-<% end %>
-<div class="d-flex align-items-center justify-content-center">
-        
-          <%= render partial: "shared/jobs"%>
-
+<div class=".container">
+  <div class=".mx-auto">
+  <a class="btn btn-outline-light" href="#"  role="button" aria-disabled="true">-------------------------------------------------------------</a>
+  <a class="btn btn-primary" href="/sign_up" role="button">Sign Up</a>
+  <a class="btn btn-outline-success" href="/sign_in" role="button">Sign_in</a>
+  <a class="btn btn-outline-info" href="/jobs" role="button">Discover Jobs</a>
+<hr>
+  <%= render partial: "shared/jobs"%>
+  </div>
 </div>
